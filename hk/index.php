@@ -1,3 +1,13 @@
+<?php
+if (isset($_GET['p'])) {
+  $page = $_GET['p'];
+  if (!file_exists("pages/".$page.".php")) {
+    $page = "404";
+  }
+} else {
+  $page = "dashboard";
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -22,7 +32,7 @@
     </a>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
+  <div class="navbar-menu">
 
     <div class="navbar-end">
       <div class="navbar-item has-dropdown is-hoverable">
@@ -46,49 +56,11 @@
 
 <div class="columns">
 
-<div class="column sidebar is-one-fifth">
-  <aside class="menu">
-    <p class="menu-label">Principal</p>
-    <ul class="menu-list">
-      <li><a class="is-active"><span class="icon"><i class="fas fa-tachometer-alt"></i></span> <span>Painel</span></a></li>
-      <li><a><span class="icon"><i class="fas fa-chart-pie"></i></span> <span>Estatísticas</span></a></li>
-    </ul>
-    <p class="menu-label">
-      Conteúdo
-    </p>
-    <ul class="menu-list">
-      <li><a><span class="icon"><i class="fas fa-file"></i></span> <span>Páginas</span></a></li>
-      <li><a><span class="icon"><i class="fas fa-newspaper"></i></span> <span>Publicações</span></a></li>
-      <li><a><span class="icon"><i class="fas fa-images"></i></span> <span>Galeria</span></a></li>
-      <li><a><span class="icon"><i class="fas fa-cubes"></i></span> <span>Widgets</span></a></li>
-    </ul>
-    <p class="menu-label">
-      Personalização
-    </p>
-    <ul class="menu-list">
-      <li><a><span class="icon"><i class="fas fa-palette"></i></span> <span>Estilos</span></a></li>
-      <li><a><span class="icon"><i class="fas fa-puzzle-piece"></i></span> <span>Extensões</span></a></li>
-      <li><a><span class="icon"><i class="fas fa-file"></i></span> <span>Opções</span></a></li>
-    </ul>
-    <p class="menu-label">
-      Administração
-    </p>
-    <ul class="menu-list">
-      <li><a><span class="icon"><i class="fas fa-toggle-on"></i></span> <span>Opções</span></a></li>
-      <li><a><span class="icon"><i class="fas fa-users"></i></span> <span>Usuários</span></a></li>
-    </ul>
-  </aside>
-</div>
+  <?php echo file_get_contents("inc/menu.php"); ?>
 
-<div class="column">
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Hello world!</h1>
-      <p class="subtitle">Programmed to work and not to feel... <i class="fas fa-music"></i></p>
-      <iframe width="300" height="150" src="https://www.youtube.com/embed/Yw6u6YkTgQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </section>
-</div>
+  <div class="column">
+    <?php echo file_get_contents("pages/".$page.".php"); ?>
+  </div>
 
 </div>
 
