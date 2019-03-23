@@ -1,4 +1,6 @@
 <?php
+require_once("../flight/config.php");
+require_once("functions.php");
 if (isset($_GET['p'])) {
   $page = $_GET['p'];
   if (!file_exists("pages/".$page.".php")) {
@@ -15,9 +17,10 @@ if (isset($_GET['p'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Flight CMS - Housekeeping</title>
-  <link rel="stylesheet" href="../flight/assets/css/bulma.min.css">
+  <link rel="stylesheet" href="../flight/assets/css/bulma.css">
   <link rel="stylesheet" href="../flight/assets/css/hk.css">
-  <script defer src="../flight/assets/js/font-awesome-5.3.1.js"></script>
+  <link rel="stylesheet" href="../flight/assets/css/font-awesome-5.8.1.css">
+  <script src="../flight/assets/js/font-awesome-5.8.1.js"></script>
 </head>
 
 <body>
@@ -56,10 +59,10 @@ if (isset($_GET['p'])) {
 
 <div class="columns">
 
-  <?php echo file_get_contents("inc/menu.php"); ?>
+  <?php include("inc/menu.php"); ?>
 
   <div class="column">
-    <?php echo file_get_contents("pages/".$page.".php"); ?>
+    <?php include("pages/".$page.".php"); ?>
   </div>
 
 </div>

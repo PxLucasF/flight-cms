@@ -1,0 +1,10 @@
+{
+  "title": {
+    "desc": "Título",
+    "ptbr": "Oi, mundo!"
+  },
+  "subtitle": {
+    "desc": "Subtítulo",
+    "ptbr": "Meu primeiro site usando o Flight CMS!"
+  }
+}
