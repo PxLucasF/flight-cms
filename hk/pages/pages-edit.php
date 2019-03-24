@@ -1,10 +1,10 @@
 <?php
 
-$strings = "../flight/styles/".$FLIGHT_TEMPLATE."/".$edit."/strings.json";
+$strings = "../flight/styles/".$FLIGHT_STYLE."/".$edit."/strings.json";
 
-$json = file_get_contents("../flight/styles/".$FLIGHT_TEMPLATE."/".$edit."/config.json");
+$json = file_get_contents("../flight/styles/".$FLIGHT_STYLE."/".$edit."/config.json");
 $page_config = json_decode($json, true);
-$FLIGHT_PAGE_TITLE = $page_config['flight_title'];
+$FLIGHT_PAGE_TITLE = $page_config['page_title'];
 
 $json = file_get_contents($strings);
 $data = json_decode($json, true);
@@ -42,11 +42,7 @@ $data = json_decode($json);
 
 $form = '<form action="?p=pages&edit=index&update" method="post">';
 foreach ($data as $key => $value) {
-  if ( $key == "desc" or "ptbr" ) {
-    $form .= '<div class="field"> <label class="label">'.$value->desc.'</label> <div class="control"> <input class="input" type="text" name="'.$key.'" value="'.$value->ptbr.'"> </div> </div>';
-  } else {
-    $form .= '<h4 class="title is-4">'. $key .'</h4>';
-  }
+  $form .= '<div class="field"> <label class="label">'.$value->desc.'</label> <div class="control"> <input class="input" type="text" name="'.$key.'" value="'.$value->ptbr.'"> </div> </div>';
   /* print_r ($value); */
 }
 $form .= '<div class="field"> <p class="control"> <button class="button is-link" type="submit">Salvar alterações</button> </p> </div>';

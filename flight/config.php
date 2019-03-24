@@ -1,5 +1,5 @@
 <?php
 
-$FLIGHT_TEMPLATE = "example";
+$FLIGHT_STYLE = "example";
 
 ?>

@@ -1,10 +1,3 @@
-<?php
-
-$json = file_get_contents("flight/styles/".$FLIGHT_STYLE."/index/strings.json");
-$strings = json_decode($json, true);
-
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -17,11 +10,15 @@ $strings = json_decode($json, true);
 </head>
   
 <body>
-  <section class="section">
+<section class="hero is-fullheight">
+  <div class="hero-body">
     <div class="container">
-      <h1 class="title"><?php echo $strings['title']['ptbr']; ?></h1>
-      <p class="subtitle"><?php echo $strings['subtitle']['ptbr']; ?></p>
+      <center>
+        <img src="https://i.imgur.com/tAnurRX.png" style="height:128px">
+        <h2 class="subtitle">Página não encontrada...</h2>
+      </center>
     </div>
-  </section>
+  </div>
+</section>
 </body>
 </html>
