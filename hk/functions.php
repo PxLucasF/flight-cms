@@ -8,15 +8,44 @@ function FLIGHT_ALERT($color, $msg, $size=100) {
   return $notification;
 }
 
-function FLIGHT_TOKEN($user, $pass) {
-  return md5($user)."_".md5($pass);
+function FLIGHT_LOGIN($user, $pass) {
+  $user = htmlspecialchars($user);
+  $pass = md5(htmlspecialchars($pass));
+  $success = false;
+	$handle = fopen("../flight/users.csv", "r");
+  while (($data = fgetcsv($handle)) !== false) {
+    if ($data[0] == $user && $data[1] == $pass) {
+      $success = true;
+      break;
+    }
+  }
+  fclose($handle);
+  if ($success) {
+    setcookie("token", md5($user)."_".$pass, time() + 86400, "/");
+    header('location: ?p=dashboard');
+  } else {
+    header('location: ?login=fail');
+  }
 }
 
-function FLIGHT_LOGIN($user, $pass) {
-  $db = new mysqli($FLIGHT_DB_HOST, $FLIGHT_DB_USER, $FLIGHT_DB_PASS);
-  $query = "SELECT * FROM users WHERE username='$user' AND password='$pass'";
-  $result = mysqli_query($db, $query);
-  return $result;
+function FLIGHT_TOKEN() {
+  if(isset($_COOKIE["token"])) {
+    $token = $_COOKIE["token"];
+    $success = false;
+    $handle = fopen("../flight/users.csv", "r");
+    while (($data = fgetcsv($handle)) !== false) {
+      if (md5($data[0])."_".$data[1] == $token) {
+        $success = true;
+        break;
+      }
+    }
+    fclose($handle);
+    if ($success) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 ?>

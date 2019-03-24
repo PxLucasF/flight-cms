@@ -1,12 +1,21 @@
 <?php
 
 if (isset($_GET["login"])) {
-  if (isset($_POST["user"]) and isset($_POST["password"])) {
-    FLIGHT_LOGIN($_POST["user"], $_POST["password"]);
+  switch ($_GET["login"]) {
+    case "fail":
+      $alerta = FLIGHT_ALERT("danger", "Nome de usuário e/ou senha inválidos.");
+      break;
+    default:
+      if (isset($_POST["user"]) and isset($_POST["password"])) {
+        FLIGHT_LOGIN($_POST["user"], $_POST["password"]);
+      }
   }
 }
 
-// $alerta = FLIGHT_ALERT("danger", "Nome de usuário e/ou senha inválidos.");
+if (isset($_GET["logout"])) {
+  setcookie("token", "", time() - 86400);
+  $alerta = FLIGHT_ALERT("success", "Você deslogou do painel com sucesso.");
+}
 
 ?>
 

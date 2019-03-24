@@ -44,7 +44,7 @@ if (isset($_GET['p'])) {
           <a class="navbar-item"><span class="icon"><i class="fas fa-user"></i></span> <span>Meu perfil</span></a>
           <a class="navbar-item"><span class="icon"><i class="fas fa-gavel"></i></span> <span>Registros</span></a>
           <hr class="navbar-divider">
-          <a class="navbar-item"><span class="icon"><i class="fas fa-sign-out-alt"></i></span> <span>Desconectar</span></a>
+          <a href="?logout" class="navbar-item"><span class="icon"><i class="fas fa-sign-out-alt"></i></span> <span>Desconectar</span></a>
         </div>
       </div>
 
