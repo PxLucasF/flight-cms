@@ -50,7 +50,7 @@ if (isset($_GET['p'])) {
 
       <a class="navbar-item"><i class="fas fa-cog"></i></a>
       <a class="navbar-item"><i class="far fa-life-ring"></i></a>
-      <a class="navbar-item"><i class="fas fa-power-off"></i></a>
+      <a href="../" class="navbar-item"><i class="fas fa-home"></i></a>
     </div>
 
   </div>

@@ -1,6 +1,10 @@
 <?php
 
 require_once("flight/config.php");
+require_once("flight/functions.php");
+
+$json = file_get_contents("flight/styles/".$FLIGHT_STYLE."/index/strings.json");
+$strings = json_decode($json, true);
 
 do {
   

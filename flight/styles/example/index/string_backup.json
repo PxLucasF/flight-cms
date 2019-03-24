@@ -8,3 +8,16 @@
     "ptbr": "Meu primeiro site usando o Flight CMS!"
   }
 }
+
+{
+  "title": {
+    "desc": "Título",
+    "type": "input",
+    "ptbr": "Oi, mundo!"
+  },
+  "subtitle": {
+    "desc": "Subtítulo",
+    "type": "textarea",
+    "ptbr": "Meu primeiro site usando o Flight CMS!"
+  }
+}

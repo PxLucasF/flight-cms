@@ -1,1 +1,1 @@
-{"title":{"desc":"T\u00edtulo","ptbr":"Oi, tudo bom"},"subtitle":{"desc":"Subt\u00edtulo","ptbr":"Eu estou funcionando :)"}}
+{"title":{"desc":"T\u00edtulo","type":"input","ptbr":"Oi, mundo!"},"subtitle":{"desc":"Subt\u00edtulo","type":"textarea","ptbr":"Meu primeiro site usando o <b>Flight CMS<\/b>!"}}

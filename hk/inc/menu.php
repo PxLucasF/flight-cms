@@ -12,13 +12,13 @@
       <li><a href="?p=pages" id="menu-pages"><span class="icon"><i class="fas fa-file"></i></span> <span>Páginas</span></a></li>
       <li><a><span class="icon"><i class="fas fa-newspaper"></i></span> <span>Publicações</span></a></li>
       <li><a><span class="icon"><i class="fas fa-images"></i></span> <span>Galeria</span></a></li>
-      <li><a><span class="icon"><i class="fas fa-cubes"></i></span> <span>Widgets</span></a></li>
+      <li><a><span class="icon"><i class="fas fa-envelope"></i></span> <span>Formulários</span></a></li>
     </ul>
     <p class="menu-label">
       Personalização
     </p>
     <ul class="menu-list">
-      <li><a><span class="icon"><i class="fas fa-palette"></i></span> <span>Estilos</span></a></li>
+      <li><a href="?p=style" id="menu-style"><span class="icon"><i class="fas fa-palette"></i></span> <span>Aparência</span></a></li>
       <li><a><span class="icon"><i class="fas fa-puzzle-piece"></i></span> <span>Extensões</span></a></li>
     </ul>
     <p class="menu-label">
