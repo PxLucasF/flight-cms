@@ -17,7 +17,7 @@ if (isset($_GET["update"])) {
       $json_object = json_encode($data);
       file_put_contents($strings, $json_object);
     }
-    $alerta = FLIGHT_ALERT("success", "Página alterada com sucesso!");
+    $alerta = FLIGHT_ALERT("success", "Página alterada com sucesso!", 50);
   }
 }
 
@@ -35,7 +35,7 @@ if (isset($_GET["update"])) {
 
 <?php
 
-if(isset($alerta)) { echo $alerta; };
+if(isset($alerta)) { echo $alerta; }
 
 $json = file_get_contents($strings); // Pegar informações atualizadas
 $data = json_decode($json);
