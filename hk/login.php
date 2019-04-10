@@ -50,7 +50,7 @@ if (isset($_GET["logout"])) {
           </div>
           <div class="field">
             <div class="control has-icons-left">
-              <input class="input" type="text" name="password" placeholder="Senha">
+              <input class="input" type="password" name="password" placeholder="Senha">
               <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
             </div>
           </div>

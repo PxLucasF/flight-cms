@@ -1,40 +1,82 @@
-<section class="section">
-  <div class="container">
-    <h1 class="title">Páginas</h1>
-    <p class="subtitle">Editar informações  e conteúdo das páginas do site</p>
+<h1 class="title">Pages</h1>
+<p class="subtitle">Manage and edit your website pages</p>
 
-<table class="table is-striped is-fullwidth">
-  <thead>
-    <tr>
-      <th>Código</th>
-      <th>Título</th>
-      <th>Ações</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-
-<?php
-$dir = new DirectoryIterator("../flight/styles/".$FLIGHT_STYLE);
-foreach ($dir as $fileinfo) {
-    if ($fileinfo->isDir() && !$fileinfo->isDot()) {
-        $json = file_get_contents("../flight/styles/".$FLIGHT_STYLE."/".$fileinfo->getFilename()."/config.json");
-        $page_config = json_decode($json, true);
-        $FLIGHT_PAGE_TITLE = $page_config['page_title'];
-        echo '<tr>';
-        echo '<td>'.$fileinfo->getFilename()."</td>";
-        echo '<td>'.$FLIGHT_PAGE_TITLE."</td>";
-        echo '<td>';
-        echo '<a href="?p=pages&edit='.$fileinfo->getFilename().'" class="button is-link is-small is-outlined"><span class="icon"><i class="fas fa-edit"></i></span> <span>Editar</span></a> ';
-        echo '<a href="../?p='.$fileinfo->getFilename().'" target="_blank" class="button is-link is-small is-outlined"><span class="icon"><i class="fas fa-eye"></i></span> <span>Visualizar</span></a> ';
-        echo '<a href="?p=pages&delete='.$fileinfo->getFilename().'" class="button is-danger is-small is-outlined"><span class="icon"><i class="fas fa-trash-alt"></i></span> <span>Apagar</span></a>';
-        echo '</td>';
-    }
-}
-?>
-    
-  </tbody>
-</table>
-
+<div class="columns">
+  <div class="column">
+    <div class="card hk-card">
+      <div class="card-content">
+        <table class="table is-fullwidth">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Título</th>
+              <th><div class="actions">Ações</div></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>index</td>
+              <td>Homepage</td>
+              <td>
+                <div class="actions">
+                  <a href="#" class="button is-primary is-outlined">
+                    <span class="icon"><i class="navbar-icon" data-feather="edit"></i></span> <span>Edit</span>
+                  </a>
+                  <a href="#" class="button is-primary is-outlined">
+                    <span class="icon"><i class="navbar-icon" data-feather="eye"></i></span> <span>Preview</span>
+                  </a>
+                  <a href="#" class="button is-primary is-outlined">
+                    <span class="icon"><i class="navbar-icon" data-feather="copy"></i></span> <span>Duplicate</span>
+                  </a>
+                  <a href="#" class="button is-danger is-outlined">
+                    <span class="icon"><i class="navbar-icon" data-feather="trash-2"></i></span> <span>Delete</span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>about</td>
+              <td>About us</td>
+              <td>
+                <div class="actions">
+                  <a href="#" class="button is-primary is-outlined">
+                    <span class="icon"><i class="navbar-icon" data-feather="edit"></i></span> <span>Edit</span>
+                  </a>
+                  <a href="#" class="button is-primary is-outlined">
+                    <span class="icon"><i class="navbar-icon" data-feather="eye"></i></span> <span>Preview</span>
+                  </a>
+                  <a href="#" class="button is-primary is-outlined">
+                    <span class="icon"><i class="navbar-icon" data-feather="copy"></i></span> <span>Duplicate</span>
+                  </a>
+                  <a href="#" class="button is-danger is-outlined">
+                    <span class="icon"><i class="navbar-icon" data-feather="trash-2"></i></span> <span>Delete</span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>contact</td>
+              <td>Keep in touch</td>
+              <td>
+                <div class="actions">
+                  <a href="#" class="button is-primary is-outlined">
+                    <span class="icon"><i class="navbar-icon" data-feather="edit"></i></span> <span>Edit</span>
+                  </a>
+                  <a href="#" class="button is-primary is-outlined">
+                    <span class="icon"><i class="navbar-icon" data-feather="eye"></i></span> <span>Preview</span>
+                  </a>
+                  <a href="#" class="button is-primary is-outlined">
+                    <span class="icon"><i class="navbar-icon" data-feather="copy"></i></span> <span>Duplicate</span>
+                  </a>
+                  <a href="#" class="button is-danger is-outlined">
+                    <span class="icon"><i class="navbar-icon" data-feather="trash-2"></i></span> <span>Delete</span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
-</section>
+</div>

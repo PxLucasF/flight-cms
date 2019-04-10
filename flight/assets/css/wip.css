@@ -54,6 +54,26 @@ a.navbar-item:hover .navbar-icon, .navbar-link:hover .navbar-icon, .is-active>.n
   border-top: 0;
 }
 
+.navbar-menu.hk-tabs .navbar-item {
+  justify-content: center;
+}
+
+.navbar-menu.hk-tabs .navbar-item {
+  width: 33.333%;
+}
+
+.pageid-pages .navbar, .pageid-pages .navbar-item {
+  border-radius: 5px 5px 0 0;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.table .actions {
+  float: right;
+}
+
 a .after-icon {
   width: 16px;
   height: 16px;
@@ -66,11 +86,14 @@ a:hover .after-icon {
 
 .card.hk-card {
   border-radius: 5px;
-  display: flex;
   align-items: center;
 }
 
-.card-content.hk-card {
+.pageid-dashboard body .card.hk-card {
+  display: flex;
+}
+
+.hk-card .card-content {
   padding: 16px;
 }
 
@@ -107,6 +130,18 @@ a:hover .after-icon {
 
 .navbar-dropdown {
   border-top: 1px solid #666;
+}
+
+a.button.is-primary .icon svg {
+  stroke: #00d1b2;
+}
+
+a.button.is-danger .icon svg {
+  stroke: #ff3860;
+}
+
+a.button:hover .icon svg {
+  stroke: #fff;
 }
 
 ::-webkit-scrollbar {

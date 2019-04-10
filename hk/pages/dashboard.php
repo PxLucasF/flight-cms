@@ -1,7 +1,83 @@
-<section class="section">
-  <div class="container">
-    <h1 class="title">Hello world!</h1>
-    <p class="subtitle">Programmed to work and not to feel... <i class="fas fa-music"></i></p>
-    <iframe width="300" height="150" src="https://www.youtube.com/embed/Yw6u6YkTgQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</section>
+    <h1 class="title">Howdy, Lucas Fernandes!</h1>
+    <p class="subtitle">You are currently managing: <strong><a href="">http://imlucas.com.br <i class="after-icon" data-feather="external-link"></i></a></strong></p>
+    
+    <div class="columns">
+      <div class="column">
+        <div class="card hk-card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <div class="hk-card-icon hk-card-light" style="background-color:hsl(141, 71%, 48%);">
+                  <i data-feather="eye"></i>
+                </div>
+              </div>
+              <div class="media-content">
+                <p class="hk-card hk-1">178</p>
+                <p class="hk-card hk-2">visitors this week</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card hk-card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <div class="hk-card-icon hk-card-light" style="background-color:hsl(171, 100%, 41%);">
+                  <i data-feather="feather"></i>
+                </div>
+              </div>
+              <div class="media-content">
+                <p class="hk-card hk-1">51</p>
+                <p class="hk-card hk-2">articles published</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card hk-card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <div class="hk-card-icon hk-card-light" style="background-color:hsl(348, 100%, 61%);">
+                  <i data-feather="search"></i>
+                </div>
+              </div>
+              <div class="media-content">
+                <p class="hk-card hk-1">#2</p>
+                <p class="hk-card hk-2">on Google position</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card hk-card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <div class="hk-card-icon hk-card-light" style="background-color:hsl(204, 86%, 53%);">
+                  <i data-feather="wind"></i>
+                </div>
+              </div>
+              <div class="media-content">
+                <p class="hk-card hk-1">99.8%</p>
+                <p class="hk-card hk-2">on PageSpeed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="notification is-warning">
+      <button class="delete" onclick="return this.parentNode.remove();"></button>
+      <strong>Warning:</strong> Your website is not using a SSL certificate, so the data transfered between your visitants and your server can be in danger. Additionally, the users browser may flag your website as insecure. You can install a certificate for free and we can teach you how in <a href="#">this article</a>.
+    </div>
+    
+    <div class="notification is-success">
+      <button class="delete" onclick="return this.parentNode.remove();"></button>
+      <strong>Hey!</strong> A new update for Flight CMS is now available. All your styles and configurations may be fine. Get the latest security improvements by <a href="#">upgrading it to the <strong>version 2.0.1</strong> here</a>!
+    </div>

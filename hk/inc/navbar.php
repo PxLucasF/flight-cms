@@ -22,13 +22,13 @@
   <div class="navbar-menu">
     <div class="navbar-start">
 
-      <a class="navbar-item is-active"><i class="navbar-icon" data-feather="home"></i> Dashboard</a>
+      <a href="?p=dashboard" id="menu-dashboard" class="navbar-item"><i class="navbar-icon" data-feather="home"></i> Dashboard</a>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link"><i class="navbar-icon" data-feather="file-text"></i> Content</a>
         <div class="navbar-dropdown">
+          <a href="?p=pages" class="navbar-item">Pages</a>
           <a class="navbar-item">Posts</a>
-          <a class="navbar-item">Pages</a>
           <a class="navbar-item">Gallery</a>
           <a class="navbar-item">Forms</a>
         </div>
@@ -56,3 +56,15 @@
     </div>
   </div>
 </nav>
+<script>
+  var url = new URL(window.location.href);
+  var current = "menu-" + url.searchParams.get("p");
+    console.log(current);
+  window.onload = function(){
+    if (current !== "menu-null") {
+      document.getElementById(current).classList.add("is-active");
+    } else {
+      document.getElementById("menu-dashboard").classList.add("is-active");
+    }
+  };
+</script>

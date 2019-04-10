@@ -8,7 +8,7 @@ if (isset($_GET["logout"])) {
 }
 
 if (FLIGHT_TOKEN() == true) {
-  require_once("housekeeping.php");
+  require_once("wip.php");
 } else {
   require_once("login.php");
 }
